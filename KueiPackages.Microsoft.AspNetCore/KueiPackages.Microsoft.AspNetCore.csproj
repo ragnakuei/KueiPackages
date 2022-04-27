@@ -4,8 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Authors>Kuei</Authors>
     <Company>RagnaKuei</Company>
-    <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ragnakuei/KueiPackages</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.Microsoft.AspNetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.Microsoft.AspNetCore</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>

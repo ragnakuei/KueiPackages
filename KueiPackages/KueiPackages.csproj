@@ -6,8 +6,8 @@
     <Company>RagnaKuei</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageVersion>0.0.0</PackageVersion>
-    <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ragnakuei/KueiPackages</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages</RepositoryUrl>
     <LangVersion>latest</LangVersion>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
   </PropertyGroup>

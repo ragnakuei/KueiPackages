@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/ragnakuei/KueiPackages</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.System.Text.Json</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.System.Text.Json</RepositoryUrl>
         <Company>RagnaKuei</Company>
         <Authors>Kuei</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

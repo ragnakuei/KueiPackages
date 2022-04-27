@@ -4,8 +4,8 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <LangVersion>default</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
-        <RepositoryType>https://github.com/ragnakuei/KueiPackages</RepositoryType>
+        <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.EntityFrameworkCore</PackageProjectUrl>
+        <RepositoryType>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.EntityFrameworkCore</RepositoryType>
         <PackageVersion>0.0.0</PackageVersion>
     </PropertyGroup>
 
