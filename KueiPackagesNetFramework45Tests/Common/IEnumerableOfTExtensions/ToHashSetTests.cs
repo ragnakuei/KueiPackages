@@ -4,7 +4,7 @@ using FluentAssertions;
 using KueiPackages.Extensions;
 using NUnit.Framework;
 
-namespace KueiExtensionsNetFramework45Tests.Common.IEnumerableOfTExtensions
+namespace KueiPackagesNetFramework45Tests.Common.IEnumerableOfTExtensions
 {
     public class ToHashSetTests
     {
