@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace KueiPackages.Extensions
+﻿namespace KueiPackages.Extensions
 {
     public static class ConcurrentDictionaryExtensions
     {

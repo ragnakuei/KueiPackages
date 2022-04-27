@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace KueiPackages.Extensions;
+﻿namespace KueiPackages.Extensions;
 
 public static class ExceptionHelpers
 {

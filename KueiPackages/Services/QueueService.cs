@@ -1,6 +1,6 @@
-﻿using System.Collections.Concurrent;
+﻿using Microsoft.Extensions.Logging;
 
-namespace KueiPackages.Microsoft.AspNetCore.Services;
+namespace KueiPackages.Services;
 
 /// <summary>
 /// Need Singleton LifeTime

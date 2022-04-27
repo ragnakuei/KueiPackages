@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace KueiPackages.Extensions;
+﻿namespace KueiPackages.Extensions;
 
 public static class LongExtensions
 {

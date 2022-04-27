@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace KueiPackages.Models
+﻿namespace KueiPackages.Models
 {
     public struct DurationDto
     {

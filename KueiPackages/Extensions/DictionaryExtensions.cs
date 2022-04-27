@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace KueiPackages.Extensions
+﻿namespace KueiPackages.Extensions
 {
     public static class DictionaryExtensions
     {

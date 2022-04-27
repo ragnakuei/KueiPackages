@@ -8,11 +8,11 @@
         <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages/tree/master/KueiPackages.Dapper</PackageProjectUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>latest</LangVersion>
-        <PackageVersion>0.0.0</PackageVersion>
+        <PackageVersion>0.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Dapper" Version="2.0.4" />
+      <PackageReference Include="Dapper" Version="2.0.123" />
       <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
     </ItemGroup>
 

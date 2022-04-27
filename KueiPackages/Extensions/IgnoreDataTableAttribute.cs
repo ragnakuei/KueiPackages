@@ -1,5 +1,3 @@
-using System;
-
 namespace KueiPackages.Extensions
 {
     /// <summary>

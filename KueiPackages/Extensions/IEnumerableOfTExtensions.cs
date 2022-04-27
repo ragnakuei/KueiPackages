@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace KueiPackages.Extensions
+﻿namespace KueiPackages.Extensions
 {
     public static class IEnumerableOfTExtensions
     {
