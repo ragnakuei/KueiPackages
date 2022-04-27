@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>KueiPackages</PackageId>
+    <Authors>Kuei</Authors>
+    <Company>RagnaKuei</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>0.0.0</PackageVersion>
+    <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ragnakuei/KueiPackages</RepositoryUrl>
+    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>

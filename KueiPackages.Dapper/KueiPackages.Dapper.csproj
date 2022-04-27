@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RepositoryUrl>https://github.com/ragnakuei/KueiPackages</RepositoryUrl>
+        <Company>RagnaKuei</Company>
+        <Authors>Kuei</Authors>
+        <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <LangVersion>latest</LangVersion>
+        <PackageVersion>0.0.0</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.0.4" />
+      <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\KueiPackages\KueiPackages.csproj" />
+    </ItemGroup>
+
+</Project>

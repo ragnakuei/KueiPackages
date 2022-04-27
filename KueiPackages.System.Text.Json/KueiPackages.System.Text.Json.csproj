@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <PackageProjectUrl>https://github.com/ragnakuei/KueiPackages</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ragnakuei/KueiPackages</RepositoryUrl>
+        <Company>RagnaKuei</Company>
+        <Authors>Kuei</Authors>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <LangVersion>latest</LangVersion>
+        <PackageVersion>0.0.0</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Text.Json" Version="5.0.2" />
+    </ItemGroup>
+
+</Project>
