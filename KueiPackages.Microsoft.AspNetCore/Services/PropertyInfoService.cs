@@ -1,4 +1,4 @@
-using KueiPackages.Microsoft.AspNetCore.Models;
+using KueiPackages.Models;
 
 namespace KueiPackages.Microsoft.AspNetCore.Services;
 

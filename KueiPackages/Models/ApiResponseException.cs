@@ -1,4 +1,4 @@
-﻿namespace KueiPackages.Microsoft.AspNetCore.Models;
+﻿namespace KueiPackages.Models;
 
 public class ApiResponseException : Exception
 {

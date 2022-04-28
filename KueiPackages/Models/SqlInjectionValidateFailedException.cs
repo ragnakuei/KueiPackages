@@ -1,4 +1,4 @@
-﻿namespace KueiPackages.Microsoft.AspNetCore.Models;
+﻿namespace KueiPackages.Models;
 
 /// <summary>
 /// 當傳入字串包含 SQL Injection 字元時，就以此 Exception 回應

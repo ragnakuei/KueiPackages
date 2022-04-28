@@ -15,7 +15,6 @@ global using KueiPackages.Dapper;
 global using KueiPackages.Dapper.Generator;
 global using KueiPackages.EntityFrameworkCore;
 global using KueiPackages.Extensions;
-global using KueiPackages.Microsoft.AspNetCore.Models;
 global using KueiPackages.Microsoft.AspNetCore.Services;
 global using KueiPackages.Models;
 global using KueiPackages.Services;

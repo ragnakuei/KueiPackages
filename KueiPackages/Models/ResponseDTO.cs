@@ -1,4 +1,4 @@
-﻿namespace KueiPackages.Microsoft.AspNetCore.Models;
+﻿namespace KueiPackages.Models;
 
 public abstract class BaseResponseDTO
 {
@@ -31,29 +31,9 @@ public abstract class BaseResponseDTO
 public class ResponseDTO : BaseResponseDTO
 {
     public object? Data { get; set; }
-
-    public static ResponseDTO Ok(object? o = null, string messsage = "")
-    {
-        return new ResponseDTO
-               {
-                   IsFormValid = true,
-                   Message     = messsage,
-                   Data        = o
-               };
-    }
 }
 
 public class ResponseDTO<T> : BaseResponseDTO
 {
     public T Data { get; set; }
-
-    public static ResponseDTO<T> Ok(T o, string messsage = "")
-    {
-        return new ResponseDTO<T>
-               {
-                   IsFormValid = true,
-                   Message     = messsage,
-                   Data        = o
-               };
-    }
 }

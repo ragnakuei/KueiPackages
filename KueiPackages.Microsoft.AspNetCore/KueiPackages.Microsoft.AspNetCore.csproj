@@ -9,7 +9,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>
-    <PackageVersion>0.0.0</PackageVersion>
+    <PackageVersion>0.0.2</PackageVersion>
     <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
   </PropertyGroup>
