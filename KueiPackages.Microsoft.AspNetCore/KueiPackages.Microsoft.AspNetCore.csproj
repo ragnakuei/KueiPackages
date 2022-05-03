@@ -9,12 +9,13 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>
-    <PackageVersion>0.0.2</PackageVersion>
+    <PackageVersion>0.0.6</PackageVersion>
     <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KueiPackages.System.Text.Json\KueiPackages.System.Text.Json.csproj" />
     <ProjectReference Include="..\KueiPackages\KueiPackages.csproj" />
   </ItemGroup>
 

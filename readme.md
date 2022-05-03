@@ -1,7 +1,7 @@
-
 ## KueiPackages
 
 - IEnumerable\<T>
+
   - ToDataTable()
   - ForEach()
   - Aggregate()
@@ -14,6 +14,7 @@
   - Contains()
 
 - Decimal
+
   - ToFix()
   - ToFixAndFillTailZero()
   - Pow()
@@ -21,9 +22,11 @@
   - StDev()
 
 - Dictionary\<TKey?, TValue?>()
+
   - GetValueOrNull()
 
 - ConcurrentDictionary\<TKey?, TValue?>()
+
   - GetValueOrDefault()
 
 - String
@@ -40,8 +43,8 @@
   - ToNullableInt()
   - TrimStart()
   - TrimEnd()
-  
 - DataTable
+
   - Except()
   - MergeByExcept()
   - MergeByDistinct()
@@ -56,10 +59,12 @@
 ## KueiPackages.Dapper
 
 - IDbConnection
+
   - QueryMultipleResult().Result\<T>()
   - QueryMultipleResult().Result()
 
 - DynamicParameters
+
   - Add()
 
 - TypeHandler
@@ -67,16 +72,15 @@
 
 ## KueiPackages.EntityFrameworkCore
 
- - DbContext
-   - QueryMultiple().Result\<T>()
-   - QueryMultiple().Result()
+- DbContext
+  - QueryMultiple().Result\<T>()
+  - QueryMultiple().Result()
 
 ## KueiPackages.System.Text.Json
 
 - System.Text.Json
   - ToJson()
   - ParseJson\<T>()
-    
 - System.Text.Json.JsonConverter
   - StringNullableTimeSpanJsonConverter()
   - StringNullableDateTimeJsonConverter()
@@ -84,20 +88,25 @@
 ## KueiPackages.Microsoft.AspNetCore
 
 Extensions
+
 - String.GetContentType()
-- Controller.RenderViewAsync<T>()
+- Controller.RenderViewAsync\<T>()
 
 Attribute
+
 - PreventSqlInjectionAttribute
 
 Services
+
 - PropertyInfoService
 - SqlInjectionValidateStringService
 
 Validate
+
 - BaseValidate
 
 Exceptions
+
 - ApiResponseException
 - NotFoundException
 - SqlInjectionValidateFailedException
@@ -107,4 +116,3 @@ Exceptions
 
 - QueueService
   - QueueActionAsync()
-

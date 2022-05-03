@@ -2,10 +2,10 @@
 
 public class ApiResponseException : Exception
 {
-    public ApiResponseException(ResponseDTO? responseDto)
+    public ApiResponseException(ExceptionDto? exceptionDTO)
     {
-        ResponseDTO = responseDto;
+        ExceptionDTO = exceptionDTO;
     }
 
-    public ResponseDTO? ResponseDTO { get; }
+    public ExceptionDto? ExceptionDTO { get; }
 }
