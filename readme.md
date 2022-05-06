@@ -56,6 +56,13 @@
   - IsDictionary()
   - IsDictionaryValueType()
 
+- DateTime
+  - Add()
+
+- DurationDto
+  - Except()
+  - IsOverlap()
+
 ## KueiPackages.Dapper
 
 - IDbConnection
