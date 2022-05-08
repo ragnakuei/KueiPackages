@@ -1,67 +1,72 @@
 ## KueiPackages
 
-- IEnumerable\<T>
+- Extensions
+  - IEnumerable\<T>
 
-  - ToDataTable()
-  - ForEach()
-  - Aggregate()
-  - ToPaged()
-  - GroupByToDictionary()
-  - ToHashSet45()
-  - ExceptNoDistinct()
-  - Filter()
-  - PartialContains()
-  - Contains()
+    - ToDataTable()
+    - ForEach()
+    - Aggregate()
+    - ToPaged()
+    - GroupByToDictionary()
+    - ToHashSet45()
+    - ExceptNoDistinct()
+    - Filter()
+    - PartialContains()
+    - Contains()
 
-- Decimal
+  - Decimal
 
-  - ToFix()
-  - ToFixAndFillTailZero()
-  - Pow()
-  - Sqrt()
-  - StDev()
+    - ToFix()
+    - ToFixAndFillTailZero()
+    - Pow()
+    - Sqrt()
+    - StDev()
 
-- Dictionary\<TKey?, TValue?>()
+  - Dictionary\<TKey?, TValue?>()
 
-  - GetValueOrNull()
+    - GetValueOrNull()
 
-- ConcurrentDictionary\<TKey?, TValue?>()
+  - ConcurrentDictionary\<TKey?, TValue?>()
 
-  - GetValueOrDefault()
+    - GetValueOrDefault()
 
-- String
-  - Join()
-  - ToNullableDecimal()
-  - ToDecimal()
-  - Utf8Encode()
-  - Utf8Decode()
-  - ToNullableGuid()
-  - ToNullableDateTime()
-  - IsNullOrWhiteSpace()
-  - ToNullableTimeSpan()
-  - ToNullableLong()
-  - ToNullableInt()
-  - TrimStart()
-  - TrimEnd()
-- DataTable
+  - String
+    - Join()
+    - ToNullableDecimal()
+    - ToDecimal()
+    - Utf8Encode()
+    - Utf8Decode()
+    - ToNullableGuid()
+    - ToNullableDateTime()
+    - IsNullOrWhiteSpace()
+    - ToNullableTimeSpan()
+    - ToNullableLong()
+    - ToNullableInt()
+    - TrimStart()
+    - TrimEnd()
+  - DataTable
 
-  - Except()
-  - MergeByExcept()
-  - MergeByDistinct()
-  - MergeColumns()
-  - LeftJoin()
-  - LeftJoinAppendRight()
+    - Except()
+    - MergeByExcept()
+    - MergeByDistinct()
+    - MergeColumns()
+    - LeftJoin()
+    - LeftJoinAppendRight()
 
-- Type
-  - IsDictionary()
-  - IsDictionaryValueType()
+  - Type
+    - IsDictionary()
+    - IsDictionaryValueType()
 
-- DateTime
-  - Add()
+  - DateTime
+    - Add()
 
-- DurationDto
-  - Except()
-  - IsOverlap()
+  - DurationDto
+    - Except()
+    - IsOverlap()
+
+- Helpers
+  - String
+    - ToDateTime
 
 ## KueiPackages.Dapper
 
