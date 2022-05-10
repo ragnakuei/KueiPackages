@@ -7,6 +7,11 @@ public class PreventSqlInjectionAttribute : ValidationAttribute
         var sqlInjectionValidateStringService = validationContext.GetService<ISqlInjectionValidateStringService>()
                                              ?? throw new ArgumentNullException("validationContext.GetService<ISqlInjectionValidateStringService>()");
 
+        if (value == null)
+        {
+            return ValidationResult.Success;
+        }
+        
         if (value.GetType().IsDictionary())
         {
             if (value is IDictionary<string, string> dict)
