@@ -19,13 +19,13 @@ public class ListViewModel
     /// 排序欄位
     /// </summary>
     [PreventSqlInjection]
-    public string SortColumn { get; set; }
+    public string? SortColumn { get; set; }
 
     /// <summary>
     /// 前端決定的要排序的欄位
     /// </summary>
     [PreventSqlInjection]
-    public string ClickSortColumn { get; set; }
+    public string? ClickSortColumn { get; set; }
 
     /// <summary>
     /// 排序欄位順序
@@ -36,5 +36,5 @@ public class ListViewModel
     /// 搜尋關鍵字
     /// </summary>
     [PreventSqlInjection]
-    public Dictionary<string, string> SearchFields { get; set; }
+    public Dictionary<string, string>? SearchFields { get; set; }
 }
