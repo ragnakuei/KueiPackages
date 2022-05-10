@@ -1,5 +1,3 @@
-using KueiPackages.Models;
-
 namespace KueiPackages.Microsoft.AspNetCore.Services;
 
 public class PropertyInfoService

@@ -1,6 +1,4 @@
-﻿using KueiPackages.Models;
-
-namespace KueiPackages.Microsoft.AspNetCore.Services;
+﻿namespace KueiPackages.Microsoft.AspNetCore.Services;
 
 public abstract class BaseValidator<T>
 {

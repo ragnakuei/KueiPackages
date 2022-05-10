@@ -1,6 +1,4 @@
-﻿using KueiPackages.Models;
-
-namespace KueiPackages.Microsoft.AspNetCore.Validations;
+﻿namespace KueiPackages.Microsoft.AspNetCore.Validations;
 
 public class SqlInjectionValidateStringService : ISqlInjectionValidateStringService
 {
