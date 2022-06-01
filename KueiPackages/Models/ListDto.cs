@@ -16,12 +16,12 @@ public class ListDto
     /// <summary>
     /// 排序欄位
     /// </summary>
-    public string SortColumn { get; set; }
+    public string? SortColumn { get; set; }
 
     /// <summary>
     /// 前端決定的要排序的欄位
     /// </summary>
-    public string ClickSortColumn { get; set; }
+    public string? ClickSortColumn { get; set; }
 
     /// <summary>
     /// 排序欄位順序
@@ -31,7 +31,7 @@ public class ListDto
     /// <summary>
     /// 搜尋關鍵字
     /// </summary>
-    public Dictionary<string, string> SearchFields { get; set; }
+    public Dictionary<string, string>? SearchFields { get; set; }
     
     public int FromRowNo => (PageNo - 1) * PageSize + 1;
 

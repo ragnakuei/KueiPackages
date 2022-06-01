@@ -8,7 +8,7 @@
         <Authors>Kuei</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <LangVersion>latest</LangVersion>
-        <PackageVersion>0.0.3</PackageVersion>
+        <PackageVersion>0.0.4</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
