@@ -68,6 +68,9 @@
   - String
     - ToDateTime
 
+- Type
+  - Array\<T>
+
 ## KueiPackages.Dapper
 
 - IDbConnection
