@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace KueiPackages.System.Text.Json;
 
-public class StringNullableTimeSpanJsonConverter : JsonConverter<TimeSpan?>
+public class NullableTimeSpanJsonConverter : JsonConverter<TimeSpan?>
 {
     public override TimeSpan? Read(ref Utf8JsonReader    reader,
                                    Type                  typeToConvert,

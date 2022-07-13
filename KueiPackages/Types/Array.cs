@@ -7,9 +7,9 @@ public class Array<T> : IEnumerable<T>
 {
     private T[] _array;
 
-    public Array(params T[] array)
+    public Array(params T[] items)
     {
-        _array = array;
+        _array = items;
     }
 
     public Array(int size)
@@ -17,11 +17,16 @@ public class Array<T> : IEnumerable<T>
         _array = new T[size];
     }
 
-    public Array(IEnumerable<T> source)
+    public Array(IEnumerable<T> items)
     {
-        _array = source.ToArray();
+        _array = items.ToArray();
     }
 
+    public static implicit operator T[](Array<T> array)
+    {
+        return array._array;
+    }
+    
     public int Length => _array.Length;
     public int Count  => _array.Length;
 
@@ -145,5 +150,11 @@ public class Array<T> : IEnumerable<T>
     public bool TrueForAll(Predicate<T> predicate)
     {
         return Array.TrueForAll(_array, predicate);
+    }
+
+    public void Add(T item)
+    {
+        Array.Resize(ref _array, _array.Length + 1);
+        _array[_array.Length - 1] = item;
     }
 }

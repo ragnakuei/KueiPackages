@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace KueiPackages.System.Text.Json;
 
-public abstract class StringNullableDateTimeJsonConverter : JsonConverter<DateTime?>
+public abstract class NullableDateTimeJsonConverter : JsonConverter<DateTime?>
 {
     protected abstract string DateTimeFormat { get; set; }
 

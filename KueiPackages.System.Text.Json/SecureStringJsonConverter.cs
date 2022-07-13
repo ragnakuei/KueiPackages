@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace KueiPackages.System.Text.Json;
 
-public class StringSecureStringJsonConverter : JsonConverter<SecureString>
+public class SecureStringJsonConverter : JsonConverter<SecureString>
 {
     public override SecureString Read(ref Utf8JsonReader    reader,
                                       Type                  typeToConvert,

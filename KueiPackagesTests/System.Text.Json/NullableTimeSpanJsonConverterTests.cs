@@ -2,13 +2,13 @@ using System.Text.Json.Serialization;
 
 namespace KueiPackagesTests.System.Text.Json
 {
-    public class StringNullableTimeSpanJsonConverterTests
+    public class NullableTimeSpanJsonConverterTests
     {
         private class Test
         {
             public int Id { get; set; }
 
-            [JsonConverter(typeof(StringNullableTimeSpanJsonConverter))]
+            [JsonConverter(typeof(NullableTimeSpanJsonConverter))]
             public TimeSpan? Time { get; set; }
         }
 

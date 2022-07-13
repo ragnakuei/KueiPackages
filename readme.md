@@ -97,8 +97,9 @@
   - ToJson()
   - ParseJson\<T>()
 - System.Text.Json.JsonConverter
-  - StringNullableTimeSpanJsonConverter()
-  - StringNullableDateTimeJsonConverter()
+  - NullableTimeSpanJsonConverter()
+  - NullableDateTimeJsonConverter()
+  - ArrayOfTJsonConverter
 
 ## KueiPackages.Microsoft.AspNetCore
 
