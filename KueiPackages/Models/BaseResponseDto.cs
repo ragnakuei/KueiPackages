@@ -18,4 +18,17 @@ public abstract class BaseResponseDto : ExceptionDto
     /// 資料總筆數
     /// </summary>
     public int DataCount { get; set; }
+
+    public int PageOffset { get; set; } = 5;
+
+    public string? Keyword { get; set; }
+
+    /// <summary>
+    /// 用來判斷目前的 PageNo 是否為合理狀況 !
+    /// </summary>
+    public bool Validate => DataCount == 0 || PageNo <= ValidMaxPageNo;
+
+    public int ValidMaxPageNo => DataCount == 0
+                                     ? 0
+                                     : (int)Math.Ceiling((double)DataCount / PageSize);
 }

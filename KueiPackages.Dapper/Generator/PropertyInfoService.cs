@@ -1,13 +1,19 @@
 ﻿using System.Collections.Concurrent;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using KueiPackages.Dapper.Generator.Models;
 
 namespace KueiPackages.Dapper.Generator
 {
-    internal class PropertyInfoService
+    public class PropertyInfoService
     {
         private static ConcurrentDictionary<Type, Dictionary<string, PropertyInfoDto>> _typeStore = new();
+
+        public Dictionary<string, PropertyInfoDto> GetProperties<T>()
+        {
+            return GetProperties(typeof(T));
+        }
 
         public Dictionary<string, PropertyInfoDto> GetProperties(Type type)
         {
@@ -30,6 +36,8 @@ namespace KueiPackages.Dapper.Generator
                                                            p.PropertyType.GetGenericArguments().FirstOrDefault(gt => gt.IsValueType == false)
                                                        }.FirstOrDefault(t => t != null);
 
+                                     dto.DisplayName = p.GetCustomAttributes(typeof(DisplayNameAttribute), false).Cast<DisplayNameAttribute>().FirstOrDefault()?.DisplayName;
+                                     
                                      dto.IsNotMapped = p.GetCustomAttributes(typeof(NotMappedAttribute), false).Any();
 
                                      dto.ColumnAttributes = p.GetCustomAttributes(typeof(ColumnAttribute), false).Cast<ColumnAttribute>().ToArray();

@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PropertyInfoService = KueiPackages.Microsoft.AspNetCore.Services.PropertyInfoService;
 
 namespace KueiPackagesTests.Microsoft.AspNetCore.PropertyInfoServiceTests;
 

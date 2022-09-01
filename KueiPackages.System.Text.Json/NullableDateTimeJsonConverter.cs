@@ -20,7 +20,7 @@ public abstract class NullableDateTimeJsonConverter : JsonConverter<DateTime?>
     }
 
     public override void Write(Utf8JsonWriter        writer,
-                               DateTime?             nullableTimeSpan,
+                               DateTime?             nullableDateTime,
                                JsonSerializerOptions options) =>
-        writer.WriteStringValue(nullableTimeSpan?.ToString(DateTimeFormat));
+        writer.WriteStringValue(nullableDateTime?.ToString(DateTimeFormat));
 }

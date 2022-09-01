@@ -39,5 +39,7 @@ namespace KueiPackages.Dapper.Generator.Models
         public bool HasColumnTypeFn => ColumnAttributes.Any(c => c.ColumnType == ColumnType.Fn);
 
         public bool HasColumnTypeDeleteFlag => ColumnAttributes.Any(c => c.ColumnType == ColumnType.DeleteFlag);
+
+        public string DisplayName { get; set; }
     }
 }

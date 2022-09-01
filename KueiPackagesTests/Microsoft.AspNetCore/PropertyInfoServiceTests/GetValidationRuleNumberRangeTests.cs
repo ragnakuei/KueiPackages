@@ -1,3 +1,5 @@
+using PropertyInfoService = KueiPackages.Microsoft.AspNetCore.Services.PropertyInfoService;
+
 namespace KueiPackagesTests.Microsoft.AspNetCore.PropertyInfoServiceTests;
 
 public class GetValidationRuleNumberRangeTests : GetValidationRuleTests

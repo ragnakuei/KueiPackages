@@ -1,4 +1,6 @@
-﻿namespace KueiPackages.Extensions
+﻿using KueiPackages.Models;
+
+namespace KueiPackages.Extensions
 {
     public static class IEnumerableOfTExtensions
     {
@@ -325,8 +327,8 @@
         }
 
         public static bool Contains<T>(this IEnumerable<T>  source,
-                                              IEnumerable<T>       filter,
-                                              IEqualityComparer<T> equalityComparer = null)
+                                       IEnumerable<T>       filter,
+                                       IEqualityComparer<T> equalityComparer = null)
         {
             equalityComparer ??= EqualityComparer<T>.Default;
 
@@ -346,8 +348,8 @@
 
 
         public static bool Contains<T, TFilter>(this IEnumerable<T>    source,
-                                                       IEnumerable<TFilter>   filter,
-                                                       Func<T, TFilter, bool> predicate)
+                                                IEnumerable<TFilter>   filter,
+                                                Func<T, TFilter, bool> predicate)
         {
             foreach (var item in source)
             {
@@ -361,6 +363,60 @@
             }
 
             return false;
+        }
+
+        public static InsertUpdateDeleteDto<T> SplitInsertUpdateDelete<T>(this IEnumerable<T> inDbDtos,
+                                                                          IEnumerable<T>      compareDtos,
+                                                                          Func<T, string>     compareCondition)
+        {
+            var result = new InsertUpdateDeleteDto<T>
+                         {
+                             Insert = new List<T>(),
+                             Update = new List<T>(),
+                             Delete = new List<T>(),
+                         };
+
+            var inDbDtosDict = inDbDtos.GroupBy(dto => compareCondition(dto))
+                                       .ToDictionary(g => g.Key, g => g.ToArray());
+
+            var compareDtosDict = compareDtos.GroupBy(dto => compareCondition(dto))
+                                             .ToDictionary(g => g.Key, g => g.ToArray());
+
+            // insert
+            var insertKeys = compareDtosDict.Keys.Except(inDbDtosDict.Keys);
+            GetDictByKeysThenInsertList(compareDtosDict, insertKeys, result.Insert);
+
+            // update
+            var updateKeys = (from d in inDbDtosDict.Keys
+                              join c in compareDtosDict.Keys
+                                  on d equals c
+                              select d).ToArray();
+            GetDictByKeysThenInsertList(compareDtosDict, updateKeys, result.Update);
+
+            // delete
+            var deleteKeys = inDbDtosDict.Keys.Except(compareDtosDict.Keys);
+            GetDictByKeysThenInsertList(inDbDtosDict, deleteKeys, result.Delete);
+
+            return result;
+        }
+
+        /// <summary>
+        /// 從 dict 取出 insertKeys 放入 storedDtos
+        /// </summary>
+        private static void GetDictByKeysThenInsertList<T>(Dictionary<string, T[]> dict,
+                                                           IEnumerable<string>     keys,
+                                                           List<T>                 storedDtos)
+        {
+            foreach (var key in keys)
+            {
+                var tempDtos = dict.GetValueOrDefault(key);
+                if (tempDtos == null)
+                {
+                    continue;
+                }
+
+                storedDtos.AddRange(tempDtos);
+            }
         }
     }
 }
