@@ -12,6 +12,6 @@ public class IndexerTests
 
         var expected = new[] { 1, 0, 3 };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 }

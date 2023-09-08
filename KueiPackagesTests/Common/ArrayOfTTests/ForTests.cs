@@ -19,7 +19,7 @@ public class ForTests
 
         var expected = new[] { 1, 2, 3 };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -39,6 +39,6 @@ public class ForTests
 
         var expected = new[] { 2, 3, 4 };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 }

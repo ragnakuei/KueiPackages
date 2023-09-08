@@ -75,7 +75,7 @@ public class ArrayOfTJsonConverterTests
                            Ids = new Array<int>(1, 2, 3),
                        };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -90,7 +90,7 @@ public class ArrayOfTJsonConverterTests
                            new TestDto2 { Id = 3, },
                        };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -105,6 +105,6 @@ public class ArrayOfTJsonConverterTests
                            new TestDto1 { Ids = new Array<int>(items: 3), },
                        };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 }

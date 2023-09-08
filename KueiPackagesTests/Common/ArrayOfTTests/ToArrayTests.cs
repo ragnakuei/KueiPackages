@@ -13,7 +13,7 @@ public class ToArrayTests
 
         var expected = new[] { 1, 2, 3 };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -24,7 +24,7 @@ public class ToArrayTests
 
         var expected = new Array<int>(1, 2, 3);
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -36,6 +36,6 @@ public class ToArrayTests
 
         var expected = new[] { 1, 2, 3 };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 }

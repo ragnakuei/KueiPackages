@@ -1,9 +1,23 @@
 namespace KueiPackages.Models;
 
-public abstract class BaseResponseDto : ExceptionDto
+public abstract class BaseResponseDto
 {
     public string CsrfToken { get; set; }
 
+    /// <summary>
+    /// 表單是否驗証成功
+    /// </summary>
+    public bool IsFormValid { get; set; }
+
+    public string Message { get; set; }
+
+    /// <summary>
+    /// 顯示 Alert Message
+    /// </summary>
+    public string AlertMessage { get; set; }
+
+    public string ErrorCode { get; set; }
+    
     /// <summary>
     /// 一頁幾筆資料
     /// </summary>

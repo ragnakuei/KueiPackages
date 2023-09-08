@@ -14,7 +14,7 @@ public class ResizeTests
 
         var expected = new[] { 1, 2, 3, 0 };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 
     [Test]
@@ -27,6 +27,6 @@ public class ResizeTests
 
         var expected = new int?[] { 1, 2, 3, null };
 
-        expected.Should().BeEquivalentTo(actual);
+        actual.Should().BeEquivalentTo(expected);
     }
 }
