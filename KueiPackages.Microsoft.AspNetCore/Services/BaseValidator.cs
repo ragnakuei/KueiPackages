@@ -4,7 +4,7 @@ public abstract class BaseValidator<T>
 {
     private Dictionary<string, List<string>> _errors = new();
 
-    public void Validate(ModelStateDictionary modelState, T dto)
+    public void Validate(ModelStateDictionary modelState, T? dto)
     {
         AddErrors(modelState);
         
