@@ -30,21 +30,22 @@ public static class StringExtensions
     public static string Utf8Encode(this string s)
     {
         var charsInutf8 = s.Select(c =>
-                                   {
-                                       var charInBytes = UTF8Encoding.Unicode.GetBytes(c.ToString());
+                            {
+                                var charInBytes = UTF8Encoding.Unicode.GetBytes(c.ToString());
 
-                                       //charInBytes.Dump();   // 60 00
+                                //charInBytes.Dump();   // 60 00
 
-                                       // \u0100 結構 \u 01 00
-                                       // 01 的位數高 - 十六進位
-                                       // 00 的位數低 - 十六進位
+                                // \u0100 結構 \u 01 00
+                                // 01 的位數高 - 十六進位
+                                // 00 的位數低 - 十六進位
 
-                                       var lowHex  = charInBytes[0].ToString("X2");
-                                       var highHex = charInBytes[1].ToString("X2");
+                                var lowHex  = charInBytes[0].ToString("X2");
+                                var highHex = charInBytes[1].ToString("X2");
 
-                                       var charInUtf8 = @$"\u{highHex}{lowHex}";
-                                       return charInUtf8;
-                                   })
+                                var charInUtf8 = @$"\u{highHex}{lowHex}";
+
+                                return charInUtf8;
+                            })
                            .Join();
 
         return charsInutf8;
@@ -57,22 +58,22 @@ public static class StringExtensions
                      .Split('-')
                      .Where(p => !string.IsNullOrWhiteSpace(p))
                      .SelectMany(word =>
-                                 {
-                                     //word.Dump();
+                      {
+                          //word.Dump();
 
-                                     // 將十六進位的字串拆成二組，每組二個字串
-                                     var highHex = word.Substring(0, 2);
-                                     var lowHex  = word.Substring(2, 2);
+                          // 將十六進位的字串拆成二組，每組二個字串
+                          var highHex = word.Substring(0, 2);
+                          var lowHex  = word.Substring(2, 2);
 
-                                     // 將每組十六進位字串，轉成 Byte
-                                     var highByte = Byte.Parse(highHex, System.Globalization.NumberStyles.HexNumber);
-                                     var lowByte  = Byte.Parse(lowHex,  System.Globalization.NumberStyles.HexNumber);
+                          // 將每組十六進位字串，轉成 Byte
+                          var highByte = Byte.Parse(highHex, System.Globalization.NumberStyles.HexNumber);
+                          var lowByte  = Byte.Parse(lowHex,  System.Globalization.NumberStyles.HexNumber);
 
-                                     // 還原成原本的 ByteArray
-                                     var bytes = new[] { lowByte, highByte };
+                          // 還原成原本的 ByteArray
+                          var bytes = new[] { lowByte, highByte };
 
-                                     return bytes;
-                                 })
+                          return bytes;
+                      })
                      .ToArray();
 
         string result = Encoding.Unicode.GetString(bytes);
@@ -190,5 +191,28 @@ public static class StringExtensions
         }
 
         return s;
+    }
+
+    /// <summary>
+    /// 在 指定的 targetIndex 附近找最近的 searchChar，保留 seachChar 之前的字串，其餘捨去。找不到對應的字元，就顯示全部 !
+    /// </summary>
+    public static string Truncate(this string s, int targetIndex, char searchChar)
+    {
+        var seachCharAllIndex = s.Select((c, i) => new { c, i })
+                                 .Where(p => p.c == searchChar)
+                                 .Select(p => p.i)
+                                 .ToArray();
+
+        if (seachCharAllIndex.Length == 0)
+        {
+            return s;
+        }
+
+        var nearestSearchCharIndex = seachCharAllIndex.OrderBy(p => Math.Abs(p - targetIndex))
+                                                      .First();
+
+        var result = s.Substring(0, nearestSearchCharIndex + 1);
+
+        return result;
     }
 }
