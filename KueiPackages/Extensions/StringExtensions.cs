@@ -194,9 +194,12 @@ public static class StringExtensions
     }
 
     /// <summary>
-    /// 在 指定的 targetIndex 附近找最近的 searchChar，保留 seachChar 之前的字串，其餘捨去。找不到對應的字元，就顯示全部 !
+    /// 動態截斷
     /// </summary>
-    public static string Truncate(this string s, int targetIndex, char searchChar)
+    /// <remarks>
+    /// 在 指定的 targetIndex 附近找最近的 searchChar，保留 seachChar 之前的字串，其餘捨去。找不到對應的字元，就顯示全部 !
+    /// </remarks>
+    public static string DynamicTruncate(this string s, int targetIndex, char searchChar)
     {
         var seachCharAllIndex = s.Select((c, i) => new { c, i })
                                  .Where(p => p.c == searchChar)
@@ -208,6 +211,7 @@ public static class StringExtensions
             return s;
         }
 
+        // 新版之後可以用 MinBy
         var nearestSearchCharIndex = seachCharAllIndex.OrderBy(p => Math.Abs(p - targetIndex))
                                                       .First();
 
