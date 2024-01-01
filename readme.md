@@ -71,6 +71,11 @@
 - Type
   - Array\<T>
 
+## KueiPackages.AOP
+
+- IServiceCollection.AddAOPScoped\<T, TImplementation>()
+- AOP Attribute
+
 ## KueiPackages.Dapper
 
 - IDbConnection

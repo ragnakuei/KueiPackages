@@ -30,6 +30,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperVsEfCore", "DapperVsE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KueiPackagesNetFramework45Tests", "KueiPackagesNetFramework45Tests\KueiPackagesNetFramework45Tests.csproj", "{53F1F630-1858-43FD-9118-623B22BBA6C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KueiPackages.AOP", "KueiPackages.AOP\KueiPackages.AOP.csproj", "{6BBC5172-A3EE-4B27-8A65-E3B1048BF057}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{53F1F630-1858-43FD-9118-623B22BBA6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53F1F630-1858-43FD-9118-623B22BBA6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53F1F630-1858-43FD-9118-623B22BBA6C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBC5172-A3EE-4B27-8A65-E3B1048BF057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBC5172-A3EE-4B27-8A65-E3B1048BF057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBC5172-A3EE-4B27-8A65-E3B1048BF057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBC5172-A3EE-4B27-8A65-E3B1048BF057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

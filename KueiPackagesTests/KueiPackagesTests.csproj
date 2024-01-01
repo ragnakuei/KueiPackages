@@ -28,6 +28,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CreateDb\CreateDb.csproj" />
+      <ProjectReference Include="..\KueiPackages.AOP\KueiPackages.AOP.csproj" />
       <ProjectReference Include="..\KueiPackages.Dapper\KueiPackages.Dapper.csproj" />
       <ProjectReference Include="..\KueiPackages.EntityFrameworkCore\KueiPackages.EntityFrameworkCore.csproj" />
       <ProjectReference Include="..\KueiPackages.Microsoft.AspNetCore\KueiPackages.Microsoft.AspNetCore.csproj" />
