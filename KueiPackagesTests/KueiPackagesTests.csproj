@@ -23,10 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="KueiServices" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\CreateDb\CreateDb.csproj" />
       <ProjectReference Include="..\KueiPackages.AOP\KueiPackages.AOP.csproj" />
       <ProjectReference Include="..\KueiPackages.Dapper\KueiPackages.Dapper.csproj" />

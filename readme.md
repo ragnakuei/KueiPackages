@@ -64,6 +64,12 @@
     - Except()
     - IsOverlap()
 
+- Services
+  - BaseValidateService
+  - QueueService
+    - QueueActionAsync()
+
+
 - Helpers
   - String
     - ToDateTime
@@ -132,8 +138,3 @@ Exceptions
 - NotFoundException
 - SqlInjectionValidateFailedException
 - ValidateFormFailedException
-
-## KueiQueueService
-
-- QueueService
-  - QueueActionAsync()
